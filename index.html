@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>App Info, Terms & Privacy</title>
+  <title>fandrop Legal & Account Management</title>
   <style>
     :root {
       --bg: #12142E;
@@ -92,7 +92,7 @@
     h3 {
       font-size: 1rem;
       color: var(--text);
-      margin-top: 16px;
+      margin-top: 20px;
       margin-bottom: 6px;
     }
 
@@ -102,7 +102,7 @@
       margin-bottom: 12px;
     }
 
-    ul {
+    ul, ol {
       margin-left: 20px;
       margin-bottom: 12px;
     }
@@ -117,6 +117,32 @@
 
     .delete-card h2 {
       color: var(--danger);
+    }
+
+    .step-box {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin: 16px 0;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 0.85rem;
+    }
+
+    .data-table th, .data-table td {
+      border: 1px solid var(--border);
+      padding: 10px;
+      text-align: left;
+    }
+
+    .data-table th {
+      background: var(--bg);
+      color: var(--accent-light);
     }
 
     .form-group {
@@ -167,105 +193,150 @@
 
   <div class="container">
     <header>
-      <h1>App Center</h1>
+      <h1>fandrop</h1>
       <p>Terms of Service, Privacy Policy & Account Management</p>
       <nav>
-        <a href="#privacy">Privacy Policy</a>
+        <a href="#delete">Account Deletion</a>
         <a href="#terms">Terms of Service</a>
+        <a href="#privacy">Privacy Policy</a>
         <a href="#support">Support</a>
-        <a href="#delete">Delete Account</a>
       </nav>
     </header>
+
+    <!-- ACCOUNT DELETION SECTION -->
+    <section id="delete" class="delete-card">
+      <h2>Account & Data Deletion Policy</h2>
+      <p>This policy details how users of <strong>fandrop</strong> can request the complete deletion of their user account and associated personal data.</p>
+      
+      <h3>How to Request Account Deletion</h3>
+      <p>You can request account deletion directly within the mobile application or via this web page:</p>
+      
+      <div class="step-box">
+        <p><strong>Option 1: In-App Deletion Request</strong></p>
+        <ol>
+          <li>Open <strong>fandrop</strong> on your device.</li>
+          <li>Navigate to the <strong>Edit Profile</strong> screen.</li>
+          <li>Scroll to the bottom and tap <strong>"Request Account & Data Deletion"</strong>.</li>
+          <li>Confirm your deletion request.</li>
+        </ol>
+      </div>
+
+      <div class="step-box">
+        <p><strong>Option 2: Web Deletion Request Form</strong></p>
+        <p>Fill out and submit the form below using the account details associated with your app profile:</p>
+        
+        <form action="mailto:fandrop.admin@gmail.com" method="post" enctype="text/plain">
+          <div class="form-group">
+            <label for="username">Username or Email Address associated with fandrop:</label>
+            <input type="text" id="username" name="Account ID / Username" placeholder="e.g., @username or email@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="reason">Optional Reason for Request:</label>
+            <textarea id="reason" name="Deletion Reason" rows="3" placeholder="Let us know why you're leaving..."></textarea>
+          </div>
+          <button type="submit">Submit Account Deletion Request</button>
+        </form>
+      </div>
+
+      <h3>Data Deletion & Retention Breakdown</h3>
+      <p>When an account deletion request is processed, data handled by <strong>fandrop</strong> is treated as follows:</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Data Category</th>
+            <th>Status Upon Deletion</th>
+            <th>Retention Window</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>User Profile</strong> (Username, Bio, Profile Avatar)</td>
+            <td>Permanently Deleted</td>
+            <td>Removed immediately upon request processing.</td>
+          </tr>
+          <tr>
+            <td><strong>Authentication Data</strong> (Login Credentials, Auth Tokens)</td>
+            <td>Permanently Deleted</td>
+            <td>Removed immediately from our authentication server.</td>
+          </tr>
+          <tr>
+            <td><strong>User Content</strong> (Freebie Posts, Photos, Locations)</td>
+            <td>Permanently Deleted</td>
+            <td>Removed within 14 days of account deletion.</td>
+          </tr>
+          <tr>
+            <td><strong>Safety & Moderation Logs</strong> (Report logs)</td>
+            <td>Retained Temporarily</td>
+            <td>Retained for up to 90 days to prevent abuse before permanent purge.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- TERMS OF SERVICE -->
+    <section id="terms">
+      <h2>Terms of Service</h2>
+
+      <h3>1. Eligibility</h3>
+      <p>You must be at least 18 years old to create an account or use fandrop. By creating an account, you represent and warrant that you meet this requirement. We reserve the right to suspend or terminate any account found to belong to someone under 18.</p>
+
+      <h3>2. What fandrop is</h3>
+      <p>fandrop is a free, community-run app that helps K-pop fans in the Philippines coordinate freebie giveaways at concerts. It is not affiliated with any artist, agency, promoter, or venue, and does not organize, sponsor, or guarantee any event, meetup, or transaction between users.</p>
+
+      <h3>3. Freebies are free</h3>
+      <p>Freebies posted on fandrop must be given away for free. Selling, trading for payment, or requiring compensation of any kind for a freebie posted on this app is not allowed and may result in your account being suspended or removed.</p>
+
+      <h3>4. Assumption of risk — in-person meetups</h3>
+      <p>fandrop facilitates coordination between users but does not participate in, supervise, or guarantee any in-person meetup. You acknowledge and agree that meeting anyone through this app, including exchanging freebies, is entirely at your own risk. fandrop does not conduct background checks, identity verification, or safety screening of any user. You are solely responsible for exercising appropriate caution, including meeting in public places and taking any other precautions you deem necessary.</p>
+
+      <h3>5. No warranty</h3>
+      <p>fandrop is provided "as is" and "as available," without warranties of any kind, whether express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, accuracy, or non-infringement. We do not warrant that the app will be uninterrupted, error-free, or secure.</p>
+
+      <h3>6. Limitation of liability</h3>
+      <p>To the fullest extent permitted by law, fandrop and its developer shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of data, use, goodwill, or other intangible losses, resulting from: (a) your use of or inability to use the app; (b) any conduct or content of any user, including any in-person interaction, injury, loss, or damage arising from a meetup arranged through the app; (c) unauthorized access to or alteration of your data; or (d) any other matter relating to the app. Our total liability for any claim arising from your use of fandrop shall not exceed the amount you have paid us in the past twelve months, which, given fandrop is free to use, is expected to be zero.</p>
+
+      <h3>7. Content you post</h3>
+      <p>You're responsible for photos and information you post. Don't post content that is harassing, sexually explicit, misleading, unlawful, or that violates someone else's rights. We may remove content or suspend accounts that violate these terms, at our sole discretion.</p>
+
+      <h3>8. Reports and moderation</h3>
+      <p>You may report posts or users you believe violate these terms. We review reports on a best-effort basis but do not guarantee any particular outcome, timeline, or response.</p>
+
+      <h3>9. Account termination</h3>
+      <p>We may suspend or terminate your account at our discretion, with or without notice, for violating these terms, posting fraudulent freebies, misusing location or reporting features, or for any conduct we believe is harmful to fandrop or its users.</p>
+
+      <h3>10. Governing law</h3>
+      <p>These terms are governed by the laws of the Republic of the Philippines, without regard to conflict of law principles. Any dispute arising from these terms or your use of fandrop shall be subject to the exclusive jurisdiction of the courts of the Philippines.</p>
+
+      <h3>11. Changes to these terms</h3>
+      <p>We may update these terms as the app grows. Continued use of fandrop after a change means you accept the updated terms.</p>
+
+      <h3>12. Contact</h3>
+      <p>Questions about these terms can be sent using the Report a Problem form under Help & Safety in the app.</p>
+    </section>
 
     <!-- PRIVACY POLICY -->
     <section id="privacy">
       <h2>Privacy Policy</h2>
       <p>Last updated: September 2026</p>
       
-      <h3>1. Information We Collect</h3>
-      <p>When you create an account, we collect the following user data:</p>
-      <ul>
-        <li>Username and profile information (bio, profile picture).</li>
-        <li>Authentication details managed securely via Supabase.</li>
-        <li>Content you voluntarily post in the app (e.g., event freebie posts).</li>
-      </ul>
+      <h3>Information We Collect</h3>
+      <p>When using <strong>fandrop</strong>, we collect account details (username, bio, profile pictures), authentication tokens, and user-submitted content (freebie posts, spots, and events).</p>
 
-      <h3>2. How Data is Used</h3>
-      <p>Your data is used solely to provide and improve app functionalities, display community posts, and handle profile interactions.</p>
-
-      <h3>3. Data Encryption & Security</h3>
-      <p>All data transmitted between your device and our servers is encrypted in transit using standard HTTPS/TLS protocols.</p>
+      <h3>Data Encryption</h3>
+      <p>All data transmitted between your mobile device and our Supabase backend servers is encrypted in transit using standard HTTPS/TLS protocols.</p>
     </section>
-
-    <!-- TERMS OF SERVICE -->
-    <section id="terms">
-      <h2>Terms of Service</h2>
-      
-      <h2>Eligibility</h2>
-    <p>You must be at least 18 years old to create an account or use fandrop. By creating an account, you represent and warrant that you meet this requirement. We reserve the right to suspend or terminate any account found to belong to someone under 18.</p>
-
-    <h2>What fandrop is</h2>
-    <p>fandrop is a free, community-run app that helps K-pop fans in the Philippines coordinate freebie giveaways at concerts. It is not affiliated with any artist, agency, promoter, or venue, and does not organize, sponsor, or guarantee any event, meetup, or transaction between users.</p>
-
-    <h2>Freebies are free</h2>
-    <p>Freebies posted on fandrop must be given away for free. Selling, trading for payment, or requiring compensation of any kind for a freebie posted on this app is not allowed and may result in your account being suspended or removed.</p>
-
-    <h2>Assumption of risk â€” in-person meetups</h2>
-    <p>fandrop facilitates coordination between users but does not participate in, supervise, or guarantee any in-person meetup. You acknowledge and agree that meeting anyone through this app, including exchanging freebies, is entirely at your own risk. fandrop does not conduct background checks, identity verification, or safety screening of any user. You are solely responsible for exercising appropriate caution, including meeting in public places and taking any other precautions you deem necessary.</p>
-
-    <h2>No warranty</h2>
-    <p>fandrop is provided "as is" and "as available," without warranties of any kind, whether express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, accuracy, or non-infringement. We do not warrant that the app will be uninterrupted, error-free, or secure.</p>
-
-    <h2>Limitation of liability</h2>
-    <p>To the fullest extent permitted by law, fandrop and its developer shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of data, use, goodwill, or other intangible losses, resulting from: (a) your use of or inability to use the app; (b) any conduct or content of any user, including any in-person interaction, injury, loss, or damage arising from a meetup arranged through the app; (c) unauthorized access to or alteration of your data; or (d) any other matter relating to the app. Our total liability for any claim arising from your use of fandrop shall not exceed the amount you have paid us in the past twelve months, which, given fandrop is free to use, is expected to be zero.</p>
-
-    <h2>Content you post</h2>
-    <p>You're responsible for photos and information you post. Don't post content that is harassing, sexually explicit, misleading, unlawful, or that violates someone else's rights. We may remove content or suspend accounts that violate these terms, at our sole discretion.</p>
-
-    <h2>Reports and moderation</h2>
-    <p>You may report posts or users you believe violate these terms. We review reports on a best-effort basis but do not guarantee any particular outcome, timeline, or response.</p>
-
-    <h2>Account termination</h2>
-    <p>We may suspend or terminate your account at our discretion, with or without notice, for violating these terms, posting fraudulent freebies, misusing location or reporting features, or for any conduct we believe is harmful to fandrop or its users.</p>
-
-    <h2>Governing law</h2>
-    <p>These terms are governed by the laws of the Republic of the Philippines, without regard to conflict of law principles. Any dispute arising from these terms or your use of fandrop shall be subject to the exclusive jurisdiction of the courts of the Philippines.</p>
-
-    <h2>Changes to these terms</h2>
-    <p>We may update these terms as the app grows. Continued use of fandrop after a change means you accept the updated terms.</p>
-
-    <h2>Contact</h2>
-    <p>Questions about these terms can be sent using the Report a Problem form under Help & Safety in the app.</p>
 
     <!-- SUPPORT -->
     <section id="support">
-      <h2>App Support & Contact</h2>
-      <p>Have questions or need help with your account? Contact our team directly:</p>
+      <h2>App Support</h2>
+      <p>If you have questions about your account, terms of service, or data deletion request for <strong>fandrop</strong>, reach out directly:</p>
       <p>Email: <a href="mailto:fandrop.admin@gmail.com">fandrop.admin@gmail.com</a></p>
-    </section>
-
-    <!-- DELETE ACCOUNT & DATA -->
-    <section id="delete" class="delete-card">
-      <h2>Request Account & Data Deletion</h2>
-      <p>In accordance with App Store and Google Play policies, you can request permanent deletion of your account and all associated profile and post data.</p>
-      
-      <p>To request deletion, please email us directly or fill out the form below:</p>
-      
-      <form action="mailto:fandrop.admin@gmail.com" method="post" enctype="text/plain">
-        <div class="form-group">
-          <label for="email">Account Email / Username:</label>
-          <input type="text" id="email" name="Account Details" placeholder="e.g., @username or user@email.com" required />
-        </div>
-        <div class="form-group">
-          <label for="reason">Reason for deletion (Optional):</label>
-          <textarea id="reason" name="Reason" rows="3" placeholder="Tell us why you're leaving..."></textarea>
-        </div>
-        <button type="submit">Submit Deletion Request</button>
-      </form>
+      <p>Or use the <em>Report a Problem</em> form under <em>Help & Safety</em> within the app.</p>
     </section>
 
     <footer>
-      <p>&copy; 2026 Fandrop. All rights reserved.</p>
+      <p>&copy; 2026 fandrop. All rights reserved.</p>
     </footer>
   </div>
 
